@@ -1,11 +1,11 @@
 pipeline {
     agent { 
         node {
-            label 'jenkins-agent-goes-here'
+            label 'docker-agent-python'
             }
       }
     triggers {
-        pollSCM '*/5 * * * *'
+        pollSCM '*/6 * * * *'
     }
     stages {
         stage('Build') {
